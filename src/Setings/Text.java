@@ -5,11 +5,11 @@ import java.util.HashMap;
 final public class Text {
     private static final HashMap<String, String> data = new HashMap<>();
 
-    private static String get(String key){
+    public static String get(String key){
         return data.get(key);
     }
 
-    public static String[] getMonth(){
+    public static String[] getMonth(String may){
         String[] month = new String[12];
         month[0] = get("JANUARY");
         month[1] = get("FEBRUARY");
