@@ -47,7 +47,7 @@ final public class Text {
         data.put("NOVEMBER", "November");
         data.put("DECEMBER", "December");
 
-        data.put("ERROR_TITLE_EMPTY", " You don't enter name!");
+        data.put("ERROR_TITLE_EMPTY", "Please enter name!");
         data.put("ERROR_IS_EXIST", "This record already exists");
         data.put("ERROR_DATE_FORMAT", "Invalid date format");
         data.put("ERROR_CODE_EMPTY", "Please enter code");
@@ -56,24 +56,7 @@ final public class Text {
         data.put("ERROR_ACCOUNT_EMPTY", "Please select account");
         data.put("ERROR_RATE_INCORRECT", "Incorrect course value");
         data.put("ERROR_AMOUNT_FORMAT", "Incorrect amount format");
-        data.put("ERROR_NO_BASE_CURRENCY", "You need to set the base currency. Set the format to another currency, after which it will return automatically");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        data.put("ERROR_NO_BASE_CURRENCY", "You need to set the base currency.\nSet the format to another currency, after which it will return automatically");
 
 
     }
