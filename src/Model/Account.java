@@ -2,6 +2,7 @@ package Model;
 
 import FInancialException.ModelException;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Account extends Common{
@@ -9,7 +10,6 @@ public class Account extends Common{
     private Currency currency;
     private double startAmount;
     private double amount;
-
     public Account(){}
 
     public Account(String title, Currency currency, double startAmount, double amount) throws ModelException {
@@ -70,8 +70,22 @@ public class Account extends Common{
         return  title;
     }
 
-    public void setAmountTransactionAndTransfers(){
+    public void setAmountTransactionAndTransfers(List<Transaction> transactions, List<Transfer> transfers){
+        this.amount = startAmount;
 
+        for (Transaction transaction : transactions){
+            if(transaction.getAccount().equals(this)) {
+                this.amount += transaction.getAmount();
+            }
+        }
+
+        for (Transfer transfer : transfers){
+            if(transfer.getFromAccount().equals(this)){
+                this.amount -= transfer.getToAmount();
+            }
+            if(transfer.getToAccount().equals(this)){
+                this.amount += transfer.getToAmount();
+            }
+        }
     }
-
 }

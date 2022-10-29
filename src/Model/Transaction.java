@@ -11,7 +11,6 @@ public class Transaction extends Common{
     private double amount;
     private String notice;
     private Date date;
-
     public Transaction (){}
 
     public Transaction(Account account, Article article, double amount, String notice, Date date) throws ModelException {
