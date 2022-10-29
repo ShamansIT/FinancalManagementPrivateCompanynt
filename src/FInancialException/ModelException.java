@@ -1,4 +1,4 @@
-package financial.exception;
+package FInancialException;
 
 import Setings.Text;
 
